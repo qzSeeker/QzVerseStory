@@ -5,7 +5,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* overscroll-behavior-y: none; */
+    /* scroll-snap-type: x mandatory; */
 }

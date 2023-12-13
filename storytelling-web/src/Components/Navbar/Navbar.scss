@@ -6,10 +6,16 @@
 .navbar {
   height: 100vh;
   width: 6rem;
-  background-color: #6823b8;
-  //   display: flex;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(120, 210, 154, 1) 0%,
+    rgba(121, 232, 255, 1) 100%
+  );
   justify-content: space-around;
   align-items: center;
+  z-index: 30;
 
   @media (max-width: 900px) {
     height: 6rem;
@@ -20,24 +26,29 @@
   }
 
   .logo h1 {
-    opacity: 0.8;
-  }
-
-  .nav-links {
-    .menu {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      align-items: center;
-      margin-top: 30vh;
-
-      a {
-        font-size: 22px;
-        padding: 14px 0;
-        cursor: pointer;
-      }
+    color: #000;
+    @media (max-width: 640px) {
+      font-size: 30px;
     }
   }
+
+  // .nav-links {
+  //   display: block;
+  //   .menu {
+  //     display: flex;
+  //     flex-direction: column;
+  //     position: relative;
+  //     align-items: center;
+  //     margin-top: 30vh;
+      
+  //     a {
+  //       font-size: 22px;
+  //       padding: 14px 0;
+  //       color: #000;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
 
   .hide {
     display: none;
@@ -54,7 +65,7 @@
   }
 
   @media (max-width: 900px) {
-    .menu {
+    .nav-links .menu {
       display: none;
     }
     .mobile-menu {
@@ -63,16 +74,87 @@
       left: 0;
       width: 90%;
       height: 100vh;
-      background: #fff;
+      background: #e2ffff;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
       align-items: start;
       animation: slideInLeft 400ms forwards;
       -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
       z-index: 30;
+
+      .humburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      ul {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        align-items: center;
+        li {
+          list-style: none;
+          font-size: 20px;
+          font-weight: 500;
+          padding: 10px 0;
+          cursor: pointer;
+
+          .menu-nav {
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #000;
+            padding: 20px 0px;
+            margin: 0px 20px;
+            display: inline-block;
+            position: relative;
+            opacity: 0.75;
+            .nav-link-ltr::before {
+              width: 0%;
+              bottom: 10px;
+            }
+          }
+          .menu-nav:hover {
+            opacity: 1;
+          }
+          .menu-nav::before {
+            transition: 200ms;
+            height: 3px;
+            content: "";
+            position: absolute;
+            background-color: #000;
+          }
+
+          .nav-link-l::before {
+            width: 0%;
+            bottom: 10px;
+          }
+          .nav-link-l:hover::before {
+            width: 100%;
+          }
+        }
+      }
+
+      .logo-menu {
+        font-size: 25px;
+        position: absolute;
+        bottom: 60px;
+        left: 100px;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(120, 210, 154, 1) 0%,
+          rgba(121, 232, 255, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeInTop 190ms forwards;
+      }
     }
     .humburger {
       display: block;
