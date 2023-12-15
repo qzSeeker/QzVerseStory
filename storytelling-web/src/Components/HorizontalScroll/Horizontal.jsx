@@ -1,15 +1,16 @@
 import React from "react";
 import "./Horizontal.scss";
 import Navbar from "../Navbar/Navbar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 export default function Horizontal() {
+  const location = useLocation();
   return (
-    <div>
-      <Navbar />
-      <div>
+    <>
+      <div className="container">
+        <Navbar />
         <Outlet />
       </div>
-    </div>
+    </>
   );
 }

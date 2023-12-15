@@ -8,7 +8,6 @@ import Horizontal from "./Components/HorizontalScroll/Horizontal";
 
 function App() {
   return (
-    <>
       <Routes>
         <Route path="/" element={<Horizontal />}>
           <Route index element={<Home />}/>
@@ -17,7 +16,6 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
         </Route>
       </Routes>
-    </>
   );
 }
 
