@@ -8,12 +8,13 @@
   height: 100vh;
   width: 6rem;
   background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(120, 210, 154, 1) 0%,
-    rgba(121, 232, 255, 1) 100%
-  );
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(2, 0, 36, 1) 0%,
+  //   rgba(120, 210, 154, 1) 0%,
+  //   rgba(121, 232, 255, 1) 100%
+  // );
+  background-color: #c1d8f0;
   justify-content: space-around;
   align-items: center;
   z-index: 30;
@@ -27,8 +28,9 @@
   }
 
   .logo h1 {
-    // opacity: 0.8;
-    color: #000;
+    text-align: center;
+    font-size: 40px;
+    color: #061230;
     @media (max-width: 640px) {
       font-size: 30px;
     }
@@ -41,13 +43,25 @@
       flex-direction: column;
       position: relative;
       align-items: center;
-      margin-top: 30vh;
-      
+      margin-top: 28vh;
+
       a {
         font-size: 22px;
         padding: 14px 0;
-        color: #000;
+        color: #061230;
         cursor: pointer;
+        transition: 50ms ease-in;
+
+        &:hover {
+          color: #4663ac;
+        }
+
+      }
+      a.active {
+        svg {
+
+          color: #4663ac;
+        }
       }
     }
   }
@@ -76,7 +90,7 @@
       left: 0;
       width: 90%;
       height: 100vh;
-      background: #e2ffff;
+      background: #c1d8f0;
       display: flex;
       flex-direction: column;
       align-items: start;
@@ -91,6 +105,10 @@
         position: absolute;
         top: 20px;
         right: 20px;
+
+        &:hover {
+          opacity: .7;
+        }
       }
 
       ul {
@@ -110,7 +128,7 @@
             font-size: 14px;
             text-transform: uppercase;
             text-decoration: none;
-            color: #000;
+            color: #061230;
             padding: 20px 0px;
             margin: 0px 20px;
             display: inline-block;
@@ -129,7 +147,7 @@
             height: 3px;
             content: "";
             position: absolute;
-            background-color: #000;
+            background-color: #061230;
           }
 
           .nav-link-l::before {
@@ -146,16 +164,8 @@
         font-size: 25px;
         position: absolute;
         bottom: 60px;
-        left: 100px;
-        background: linear-gradient(
-          90deg,
-          rgba(2, 0, 36, 1) 0%,
-          rgba(120, 210, 154, 1) 0%,
-          rgba(121, 232, 255, 1) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: fadeInTop 190ms forwards;
+        margin: 0 40px;
+        color: #061230;
       }
     }
     .humburger {
