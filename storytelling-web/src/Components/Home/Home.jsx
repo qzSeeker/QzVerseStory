@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="home-page-container" id="hero">
       <header className="home-header">
-        <h1>Welcome to QzSeekerVerse.com</h1>
+        <h1><span style={{fontSize: "120px", transform: "rotate (90deg)"}}>W</span>elcome to QzSeekerVerse.com</h1>
         <p>Embark on a Journey of Imagination and Discovery</p>
       </header>
 

@@ -57,12 +57,11 @@ export default function Story() {
 
   return (
     <div className="story-page-container">
-      <h1>Discover Captivating Stories</h1>
+      <h1><span style={{fontSize: "120px"}}>D</span>iscover Captivating Stories</h1>
 
-      <div>
+      <div className="filter">
         <label>
           <FontAwesomeIcon icon={faFilter} />
-          Filter
         </label>
         <select onChange={(e) => handleCatChange(e.target.value)}>
           <option value="All">All</option>
@@ -76,16 +75,19 @@ export default function Story() {
       </div>
 
       {/* List of Stories */}
-      <div>
-        <h2>Stories</h2>
+      <div className="stories">
+        <h2><span style={{fontSize: '64px'}}>S</span>tories</h2>
         <ul>
           {filteredStories.map((story, index) => (
-            <li>
+            <li key={index}>
               <strong>{story.title}</strong> - {stories.category}
               <p>{story.discription}</p>
             </li>
           ))}
         </ul>
+      </div>
+      <div className="story-img">
+        <img src="src\assets\Stories-Images\matt-popovich-pJwWrP-OIfk-unsplash-removebg-preview.png"></img>
       </div>
     </div>
   );

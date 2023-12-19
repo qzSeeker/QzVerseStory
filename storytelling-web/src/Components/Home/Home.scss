@@ -20,17 +20,11 @@ body {
   position: absolute;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: linear-gradient(135deg, #cfdcfe, #4663ac, #193c9b);
-  background-size: 180% 180%;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   animation: gradient-animation 6s ease infinite;
 
   .home-header {
@@ -44,24 +38,18 @@ body {
       margin: 0 110px;
       font-size: 4rem;
       animation: fadeIn 1s 0.3s backwards;
-      // color: #c8d9ed;
-      color: #193c9b;
-      background-image: -webkit-linear-gradient(
-        0deg,
-        #193c9b 32%,
-        #cfdcfe 100%
-      );
-      background-clip: text;
+      background: #0E2A70;
+      background: linear-gradient(to right, #0E2A70 37%, #252fb4 100%);
       -webkit-background-clip: text;
-      text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
+      
     }
 
     p {
       font-size: 30px;
       margin: 5px 110px;
       animation: fadeIn 1s 0.5s backwards;
-      color: #c8d9ed;
+      color: #002958;
     }
 
     @media (max-width: 1400px) {
@@ -159,8 +147,7 @@ body {
 
   .featured-title {
     font-size: 35px;
-    color: #c8d9ed;
-    // color: #061230;
+    color: #002958;
     animation: fadeIn 1s 0.8s backwards;
     position: absolute;
   }
@@ -365,7 +352,6 @@ body {
     border-radius: 10px;
     margin: 0 30px;
     animation: fadeIn 1s 0.8s backwards;
-    // background-color: #d2deeb;
     padding: 10px 20px;
     background: rgba( 255, 255, 255, 0.25 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -383,7 +369,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     img {
       height: 170px;
       width: 250px;
-      // margin: 40px 30px;
       border-radius: 10px;
       animation: fadeInRight 1s 0.8s backwards;
       transition: 70ms ease-in;
